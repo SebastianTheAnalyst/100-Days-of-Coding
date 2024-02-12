@@ -1,0 +1,69 @@
+#5 rock-paper-scissors
+
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+
+#Write your code below this line 👇
+import random
+import time
+
+wanna_play=input('Are you in the mood for some rock-paper-scissors? Y or N\n').upper()
+if wanna_play == 'Y':
+  game = int(input("Nice! Let's play. Press 1 for rock, 2 for paper, or 3 for scissors.\n"))
+
+  if game == 1:
+    print(rock)
+  if game == 2:
+    print(paper)
+  if game == 3:
+    print(scissors)
+################################################################ 
+  
+  print("You Choice\nNow it's my turn")
+  time.sleep(1)
+  computer = random.randint(1,3)
+  if computer == 1:
+    print(rock)
+  if computer == 2:
+    print(paper)
+  if computer == 3:
+    print(scissors)
+#####################################################################
+  if game == computer:
+    print("It's a tie - let's try again")
+  elif (game == 1 and computer == 3) or \
+  (game == 2 and computer == 1) or \
+  (game == 2 and computer == 1):
+    print("You win!!!")
+  else:
+    print("You Loose")
+
+else:
+  print("Have a nice Day")
+  
